@@ -1,6 +1,5 @@
 # Checkpoint
 1.1 What is a program?
-
   A set of computer instructions to accomplish a task.
   
 1.2 What is hardware?
@@ -63,16 +62,13 @@
   Interpreter
   
 1.23 What type of mistake is usually caused by a misspelled key word, a missing punctuation character, or the incorrect use of an operator?
-
   Syntax error
   
 1.24 What fundamental set of programs controls the internal operations of the computer’s hardware?
   Operating system
   
 1.25 What do you call a program that performs a specialized task, such as a virus scanner, a file compression program, or a data backup program?
-
   Utility programs
   
 1.26 Word processing programs, spreadsheet programs, email programs, Web browsers, and game programs belong to what category of software?
-
   Application software
