@@ -1,4 +1,7 @@
 # Checkpoint
+
+Instructor skipped this section of work.  Answers planned to be provided by instructor.
+
 2.1 Who is a programmer’s customer?
 
 2.2 What is a software requirement?
