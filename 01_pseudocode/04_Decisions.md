@@ -306,9 +306,32 @@ For each of the following Boolean expressions, decide whether the statement is t
 * ShoppingBay is an online auction service that requires several reports. Data for each auctioned item includes an ID number, item description, length of auction in days, and minimum required bid. Design a flowchart or pseudocode for the following: 
 
   * A program that accepts data for one auctioned item. Display data for an auction only if the minimum required bid is more than $250.00. 
+  
+  Request auction item details (object: Auction)
+	Name
+	Description
+	auction length in days
+	min req bid
+
+If min bid req > 250
+	Display the Auction object's information
+ 
   * A program that continuously accepts auction item data until a sentinel value is entered and displays all data for auctions in which the minimum required bid is more than $300.00. 
+  
+  sentinel value?: value that stops the process/exits the process or loop
+Loop: Request auction item details until sentinel value is given
+Then display all items with a min bid req of 300
+  
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
+  
+Loop: Request auction item details until sentinel value is given
+(Seperate GUI block) (By timer or event trigger) For each auction object with min bid = 0 AND auction length < 8, display it
+  
   * A program that continuously accepts auction data and displays data for every auction in which the length is between 14 and 28 days inclusive. 
+  
+Loop: Request auction item details until sentinel value is given
+(Seperate GUI block) (By timer or event trigger) For each auction object with min bid = 0 AND auction length < 8, display it
+  
   * A program that prompts the user for a maximum required bid, and then continuously accepts auction data and displays data for every auction in which the minimum bid is less than or equal to the amount entered by the user.
 
 * The Drive-Rite Insurance Company provides automobile insurance policies for drivers. Design a flowchart or pseudocode for the following: 
