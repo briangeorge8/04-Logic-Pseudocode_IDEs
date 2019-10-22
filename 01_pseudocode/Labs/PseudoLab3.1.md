@@ -109,5 +109,5 @@ Switch (month)
       Display "Invalid selection."
 
 10. Write an If-Then statement that sets the variable hours to 10 when the flag variable minimum is set.
-If flag > flag miniumum
+If miniumum
    hours = 10
