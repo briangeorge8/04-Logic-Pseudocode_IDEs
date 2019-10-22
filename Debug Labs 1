@@ -10,7 +10,7 @@ Input 1stPrize
 Display "The first prize winner will receive "' 1stPrize
 
 > Fixes: Change ' to comma
-
+> Missed: "1" instead of an alpha character.
 
 
 2
@@ -27,7 +27,7 @@ Set average = low + high/2
 Display "The average is ", average, "."
 
 > Fixes: Set average = (low + high) / 2
-
+> Missed: low instead of lowest.  high instead of highest
 
 
 3
@@ -77,7 +77,7 @@ Set GRAVITY = 1.63
 Display "Moon: ", GRAVITY, " meters per second every second."
 
 > Fixes: Remove the Constant keyword from the variable GRAVITY
-
+> Missed: If no longer a const, make it not all caps
 
 
 
