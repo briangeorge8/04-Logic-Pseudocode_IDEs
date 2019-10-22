@@ -1,0 +1,131 @@
+Lab 1
+------
+
+Start
+(Parallelogram) Display "Enter your name"
+(Parallelogram) Input name
+(Parallelogram) Display "Enter your full address"
+(Parallelogram) Input address
+(Parallelogram) Display "Enter your telephone number"
+(Parallelogram) Input phonenumber
+(Parallelogram) Display "Enter your college major"
+(Parallelogram) Input major
+(Parallelogram) Display name, address, telephone, and major
+End
+
+Display "Enter your name"
+strName = input
+Display "Enter your full address
+strAddress = input
+Display "Enter your telephone number"
+strPhoneNum = input
+Display "Enter your college major"
+strCollegeMajor = input
+Display "Your Name: {1}{0}Your Address:{2}{0}Your Telephone Number: {3}{0}Your College Major{4}", 
+	strName, newLine, strAddress, strPhoneNum, strCollegeMajor
+	
+	
+Lab 2
+------
+
+Start
+(Parallelogram) Display "Enter the projected sales total"
+(Parallelogram) Input projected sales
+(Rectangle) Set projected profit = projected sales * .23
+(Parallelogram) Display "The total projected profit is {0}", projected profit
+End
+
+Display "Enter the projected sales total"
+decProjSales = input
+decProjProfit = decProjSales * .23
+Display "The total projected profit is {0}", decProjProfit
+
+
+Lab 3
+------
+
+Start
+(Parallelogram) Display "Enter the total square feet in the tract of land"
+(Parallelogram) Input square feet
+(Rectangle) Set acres = square feet / 43,560
+(Parallelogram) Display "The entered {0} square feet is equal to {1} acres", square feet, acres
+End
+
+Display "Enter the total square feet"
+dblSqFt = input
+dblAcres = dblSqFt / 43560
+Display "The entered {0} square feet is equal to {1} acres", dblSqFt, dblAcres
+
+
+Lab 4
+------
+
+Start
+(Rectangle) Set sales tax = 1.06
+(Parallelogram) Display "Enter the price of item one"
+(Parallelogram) Input item one price
+(Parallelogram) Display "Enter the price of item two"
+(Parallelogram) Input item two price
+(Parallelogram) Display "Enter the price of item three"
+(Parallelogram) Input item three price
+(Parallelogram) Display "Enter the price of item four"
+(Parallelogram) Input item four price
+(Parallelogram) Display "Enter the price of item five"
+(Parallelogram) Input item five price
+(Rectangle) Set subtotal = item 1 price + item 2 price + item 3 price + item 4 price + item 5 price
+(Rectangle) Set total = subtotal * sales tax
+(Parallelogram) Display "The subtotal is {0}", subtotal
+(Parallelogram) Display "The sales tax is {0}", sales tax
+(Parallelogram) Display "The total is {0}", total
+End
+
+const decSalesTax = 1.06
+Display "Enter the price of item one"
+decItem1 = input
+Display "Enter the price of item two"
+decItem2 = input
+Display "Enter the price of item three"
+decItem3 = input
+Display "Enter the price of item four"
+decItem4 = input
+Display "Enter the price of item five"
+decItem5 = input
+decSubtotal = decItem1 + decItem2 + decItem3 + decItem4 + decItem5
+decTotal = decSubtotal * decSalesTax
+Display "The subtotal is {0}", decSubtotal
+Display "The sales tax is {0}", decSalesTax
+Display "The total is {0}", decTotal
+
+
+Lab 5
+------
+
+Start
+(Rectangle) Set speed = 60
+(Rectangle) Set time 1 = 5
+(Rectangle) Set time 2 = 8
+(Rectangle) Set time 3 = 12
+(Rectangle) Set distance 1 = speed * time 1
+(Rectangle) Set distance 2 = speed * time 2
+(Rectangle) Set distance 3 = speed * time 3
+(Parallelogram) Display "The distance the car will travel in {0} hours is {1} miles.", time 1, distance 1
+(Parallelogram) Display "The distance the car will travel in {0} hours is {1} miles.", time 2, distance 2
+(Parallelogram) Display "The distance the car will travel in {0} hours is {1} miles.", time 3, distance 3
+End
+
+const intSpeed = 60
+intTime1 = 5
+intTime2 = 8
+intTime3 = 12
+intDistance1 = intSpeed * intTime1
+intDistance2 = intSpeed * intTime2
+intDistance3 = intSpeed * intTime3
+Display "The distance the car will travel in {0} hours is {1} miles.", time 1, distance 1
+Display "The distance the car will travel in {0} hours is {1} miles.", time 2, distance 2
+Display "The distance the car will travel in {0} hours is {1} miles.", time 3, distance 3
+
+
+
+
+
+
