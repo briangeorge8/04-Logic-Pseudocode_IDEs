@@ -318,9 +318,42 @@ If min bid req > 250
  
   * A program that continuously accepts auction item data until a sentinel value is entered and displays all data for auctions in which the minimum required bid is more than $300.00. 
   
-  sentinel value?: value that stops the process/exits the process or loop
-Loop: Request auction item details until sentinel value is given
-Then display all items with a min bid req of 300
+Object AuctionItem
+	string Name
+	string Description
+	integer AuctionLength
+	decimal MinBid
+	
+List AuctionItems<AuctionItem>
+	
+int sentinelvalue = 400
+	
+Main()
+	AcceptAuctionItems()
+	DisplayAuctionItems()
+	
+AcceptAuctionItems()
+	bool AcceptItems = true
+	While (AcceptItems)
+		Display "Enter your auction items' name."
+		AuctionItem.Name = input
+		Display "Enter your auction items' description."
+		AuctionItem.Description = input
+		Display "Enter your auction items' maximum auction length in days."
+		AuctionItem.AuctionLength = input
+		Display "Enter your auction items' minimum acceptable bid."
+		AuctionItem.MinBid = input
+		AuctionItems.Add(AuctionItem)
+		if AuctionItem.MinBid >= sentinelvalue
+			break
+
+DisplayAuctionItems()
+	Foreach item in AuctionItems
+		Display item.Name
+		Display item.Description
+		Display item.AuctionLength
+		Display item.MinBid
+		Display newline
   
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
   
