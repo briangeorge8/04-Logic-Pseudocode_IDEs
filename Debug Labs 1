@@ -9,7 +9,7 @@ Input 1stPrize
 
 Display "The first prize winner will receive "' 1stPrize
 
-> Fixes: Remove '
+> Fixes: Change ' to comma
 
 
 
