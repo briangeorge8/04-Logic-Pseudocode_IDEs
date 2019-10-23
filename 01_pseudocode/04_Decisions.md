@@ -333,8 +333,7 @@ Main()
 	DisplayAuctionItems()
 	
 AcceptAuctionItems()
-	bool AcceptItems = true
-	While (AcceptItems)
+	While (True)
 		Display "Enter your auction items' name."
 		AuctionItem.Name = input
 		Display "Enter your auction items' description."
@@ -356,6 +355,7 @@ DisplayAuctionItems()
 		Display newline
   
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
+  
   
 Loop: Request auction item details until sentinel value is given
 (Seperate GUI block) (By timer or event trigger) For each auction object with min bid = 0 AND auction length < 8, display it
