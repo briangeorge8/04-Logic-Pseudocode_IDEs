@@ -319,6 +319,7 @@ If min bid req > 250
   * A program that continuously accepts auction item data until a sentinel value is entered and displays all data for auctions in which the minimum required bid is more than $300.00. 
   
 Object AuctionItem
+	integer ID
 	string Name
 	string Description
 	integer AuctionLength
@@ -355,6 +356,7 @@ DisplayAuctionItems()
 		Display newline
   
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
+  
   
   
 Loop: Request auction item details until sentinel value is given
