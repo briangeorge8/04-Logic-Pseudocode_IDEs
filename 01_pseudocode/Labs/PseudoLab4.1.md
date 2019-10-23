@@ -110,7 +110,19 @@ Assume that hot dogs come in packages of 10, and hot dog buns come in packages o
     The number of hot dogs that will be left over
     The number of buns that will be left over
 
+integer intNumOfPeople
+integer intHotDogCount
+Const integer HOTDOGPACKAGE = 10
+Const integer BUNPACKAGE = 8
 
+Main()
+    CalcHotDogPackageCount()
+    CalcBunPackageCount()
+    DisplayData()
+    
+CalcHotDogPackageCount()
+    integer intHotDogCountReq = intNumOfPeople * intHotDogCount
+    Roundup(intHotDogCountReq / HOTDOGPACKAGE)
 
 
 
