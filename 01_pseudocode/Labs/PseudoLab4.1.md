@@ -110,10 +110,13 @@ Assume that hot dogs come in packages of 10, and hot dog buns come in packages o
     The number of hot dogs that will be left over
     The number of buns that will be left over
 
-integer intNumOfPeople
-integer intHotDogCount
 Const integer HOTDOGPACKAGE = 10
 Const integer BUNPACKAGE = 8
+integer intNumOfPeople
+integer intHotDogCount
+integer intHotDogCountReq
+integer intHotDogPackageReq
+integer intBunPackageReq
 
 Main()
     CalcHotDogPackageCount()
@@ -121,9 +124,15 @@ Main()
     DisplayData()
     
 CalcHotDogPackageCount()
-    integer intHotDogCountReq = intNumOfPeople * intHotDogCount
-    Roundup(intHotDogCountReq / HOTDOGPACKAGE)
+    intHotDogCountReq = intNumOfPeople * intHotDogCount
+    intHotDogPackageReq = Roundup(intHotDogCountReq / HOTDOGPACKAGE)
 
+CalcBunPackageCount()
+    intBunPackageReq = Roundup(intHotDogCountReq / BUNPACKAGE)
 
-
+DisplayData()
+    Display "The minimum number of packages of hot dogs required is {0}", intHotDogPackageReq
+    Display "The minimum number of packages of buns required {0}", intBunPackageReq
+    Display "The number of hot dogs that will be left over {0}", Mod(intHotDogCountReq / HOTDOGPACKAGE)
+    Display "The number of buns that will be left over {0}", Mod(intHotDogCountReq / BUNPACKAGE)
 
