@@ -4,11 +4,34 @@
 
 A bug collector collects bugs every day for seven days. Design a program that keeps a running total of the number of bugs collected during the seven days. The loop should ask for the number of bugs collected for each day, and when the loop is finished, the program should display the total number of bugs collected.
 
+integer intBugTotal = 0
+
+for(i = 0; i < 7; i++)
+{
+    Display "Enter the number of bugs collected on day {0}", i + 1
+    intBugTotal += input
+}
+
+Display "You have collected {0} bugs over the last 7 days", intBugTotal
+
+
 
 
 # Calories Burned
 
 Running on a particular treadmill you burn 3.9 calories per minute. Design a program that uses a loop to display the number of calories burned after 10, 15, 20, 25, and 30 minutes.
+
+Const double CAL_PER_MIN = 3.9
+integer intCalBurned = 0
+
+for (i = 10; i <= 30; i + 5)
+{
+    intCalBurned = CAL_PER_MIN * i
+    Display "You have burned {0} calories in {1} minutes", intCalBurned, i
+}
+
+
+
 
 # Budget Analysis
 
@@ -18,9 +41,33 @@ Design a program that asks the user to enter the amount that he or she has budge
 
 Design a program with a loop that asks the user to enter a series of positive numbers. The user should enter a negative number to signal the end of the series. After all the positive numbers have been entered, the program should display their sum.
 
+integer input
+Do
+{
+
+}While(input >= 0)
+
+
+
+
 # Tuition Increase
 
 At one college, the tuition for a full-time student is $6,000 per semester. It has been announced that the tuition will increase by 2 percent each year for the next five years. Design a program with a loop that displays the projected semester tuition amount for the next five years.
+
+double dblTuition = 6000
+double dblTuitionTotal = 0
+
+for (i = 0; i < 10; i++)
+{
+    if (i != 0 AND i MOD 2 == 0)
+        dblTuition *= 1.02
+
+    Display "Your projected tuition for semester {0} is {1}", i + 1, dblTuition
+    
+    dblTuitionTotal += dblTuition
+}
+
+Display "Your projected total tuition is {0}", dblTuitionTotal
 
 # Average Rainfall
 

@@ -5,9 +5,74 @@
 
 Design a payroll program that prompts the user to enter an employee’s hourly pay rate and the number of hours worked. Validate the user’s input so that only pay rates in the range of $7.50 through $18.25 and hours in the range of 0 through 40 are accepted. The program should display the employee’s gross pay.
 
+Const Real Min_Pay_Rate = 7.5
+Const Real Max_Pay_Rate = 18.25
+Const Real Min_Hours = 0
+Const Real Max_Hours = 40
+
+Main()
+	Real hourlyPayRate = GetRealData(Min_Pay_Rate, Max_Pay_Rate, "Enter your hourly pay rate.")
+	Real hoursWorked = GetRealData(Min_Hours, Max_Hours, "Enter the number of hours you worked this pay period")
+	
+	Real payPeriodPay = CalcPayPeriodPay(hourlyPayRate, hoursWorked)
+
+	DisplayResults(payPeriodPay)
+
+Function Real GetRealData(Real lowerBound, Real upperBound, String statement)
+	Display statement
+
+	Real number = input.toreal()
+
+	while(number < lowerBound OR number > upperBound)
+		Display statement
+		real number = input.toreal()
+
+	return number
+
+Function Real CalcPayPeriodPay(Real hourlyPayRate, Real hoursWorked)
+	return hourlyPayRate * hoursWorked
+
+Function Void DisplayResults(Real payPeriodPay)
+	Display "Your pay this period is {0}", payPeriodPay
+
+
+
+
 ## Theater Seating Revenue with Input Validation
 
 A dramatic theater has three seating sections, and it charges the following prices for tickets in each section: section A seats cost $20 each, section B seats cost $15 each, and section C seats cost $10 each. The theater has 300 seats in section A, 500 seats in section B, and 200 seats in section C. Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. The program should validate the numbers that are entered for each section.
+
+Main()
+	integer sectionASold = GetData("A")
+	integer sectionBSold = GetData("B")
+	integer sectionCSold = GetData("C")
+
+	integer total = GetTotal(sectionASold, sectionBSold, sectionCSold)
+
+	ShowResults(total)
+
+
+Function Integer GetData(string seatingArea)
+	Display "Enter the number of tickets sold in seating area {0}.", seatingArea
+	integer ticketsSold = input.toint()
+
+	While((seatingArea == "A" AND ticketsSold > 300) OR
+			(seatingArea == "B" AND ticketsSold > 500) OR
+			(seatingArea == "C" AND ticketsSold > 200)
+		Display "Invalid number entered.
+		Display "Enter the number of tickets sold in seating area {0}.", seatingArea
+		integer ticketsSold = input.toint()
+
+	return ticketsSold
+
+
+Function Integer GetTotal(Integer sectionASold, Integer sectionBSold, Integer sectionCSold)
+	return (sectionASold * 20 + sectionBSold * 15 + sectionCSold * 10)
+
+
+Function Void ShowResults(Integer total)
+	Display "The total income generated from ticket sales is ${0}", total
+
 
 ## Fat Gram Calculator
 
@@ -61,7 +126,10 @@ End Module
 // The getNumber module gets an integer
 Module getNumber(Integer Ref inputAnswer)
 		Display “Enter 1 for rock, 2 for paper, 3 for scissors:  “
-		Input inputAnswer
+		inputAnswer = input.toint()
+		While (!Range(1, 4).Contains(inputAnswer))
+			Display “Enter 1 for rock, 2 for paper, 3 for scissors:  “
+			inputAnswer = input.toint()
 End Module
 
 // The showWinner module shows if number is a prime

@@ -1,0 +1,75 @@
+Problem 1
+---------
+
+main()
+    int rand = GenerateNumber(1, 100)
+
+GenerateNumber(int lowerBound, int upperBound)
+    return rand(1, 100)
+
+
+
+Problem 2
+---------
+
+main()
+    set result = Half(number)
+
+half(real number)
+    return number / 2
+
+
+
+
+Problem 3
+---------
+
+main()
+    result = cube(4)
+
+Function Integer cube(int num)
+    return num * num * num
+
+
+
+Problem 4
+---------
+
+timesTen(int num)
+    return num * 10
+
+
+
+
+Problem 5
+---------
+
+getFirstName()
+    Display "Please enter your first name"
+    return input
+
+
+
+Problem 6
+---------
+
+convertToUpper(str1)
+    return str1.toupper
+
+
+
+Debugging 1
+-----------
+
+Line 7: The numbers 1 and 7 are swapped
+
+
+Debugging 2
+-----------
+
+Line 19: The return variable is wrong. It should be "discountPrice"
+
+
+Debugging 3
+
+Line 29: There is no catching of the return value to set the result

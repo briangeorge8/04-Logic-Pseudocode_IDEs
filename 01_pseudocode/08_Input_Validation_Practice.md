@@ -2,13 +2,82 @@
 
 Design an algorithm that prompts the user to enter a positive nonzero number and validates the input.
 
+Function Real GetNumber()
+   Real number
+   Display "Enter a positive nonzero number"
+   number = converttoreal(input)
+
+   While(number < 1)
+      Display "Incorrect input provided"
+      Display "Enter a positive nonzero number"
+      number = converttoreal(input)
+
+   return number
+
+
+
+
 Design an algorithm that prompts the user to enter a number in the range of 1 through 100 and validates the input.
+
+Function Real GetNumber()
+   Real number
+   Display "Enter a number between 1 and 100 inclusive"
+
+   number = converttoreal(input)
+
+   while(number < 1 OR number > 100)
+      Display "Incorrect input provided"
+      Display "Enter a number between 1 and 100 inclusive"
+      number = converttoreal(input)
+
+   return number
+
+
+
 
 Design an algorithm that prompts the user to enter “yes” or “no” and validates the input. (Use a case-insensitive comparison.)
 
+Function string GetAnswer()
+   string answer
+   Display "Please enter 'yes' or 'no'"
+
+   answer = input
+
+   while (answer.tolower != "yes" AND answer.tolower != "no")
+      Display "Incorrect input provided"
+      Display "Please enter 'yes' or 'no'"
+      answer = input
+
+   return answer
+
+
+
+
 Design an algorithm that prompts the user to enter a number that is greater than 99 and validates the input.
 
+Function Real GetNumber()
+   real number
+
+   Display "Enter a number greater than 99"
+   number = converttoreal(input)
+
+   While(number < 99)
+      Display "Incorrect input provided"
+      Display "Enter a number greater than 99"
+      number = converttoreal(input)
+
+   return number
+
+
+
+
 Design an algorithm that prompts the user to enter a secret word. The secret word should be at least 8 characters long. Validate the input.
+
+
+
+
+
+
 
 # Debugging Exercises
 
@@ -29,6 +98,10 @@ While value < 1 AND value > 10
    Input value
 End While
 ```
+
+>>> The AND needs to be an OR
+
+
 Why does the following pseudocode not perform as indicated in the comments?
 ```
 // This program gets a dollar amount from the user
@@ -46,6 +119,10 @@ While amount < 0
    Display "Enter a dollar amount."
 End While
 ```
+
+>>> The user is not provided the chance to correctly enter input past the first attempt
+
+
 The following pseudocode works, but it performs a case-sensitive validation of the user’s input. How could the algorithm be improved so the user does not have to pay attention to capitalization when entering a name?
 ```
 // This program asks the user to enter a string
@@ -65,3 +142,5 @@ While choice != "Lisa" AND choice != "Tim"
    Input response
 End While
 ```
+
+>>> While choice.tolower != "lisa" AND choice != "tim"

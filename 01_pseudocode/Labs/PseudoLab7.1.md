@@ -8,9 +8,51 @@ The area of a rectangle is calculated according to the following formula:
 
 Design a function that accepts a rectangle’s width and length as arguments and returns the rectangle’s area. Use the function in a program that prompts the user to enter the rectangle’s width and length, and then displays the rectangle’s area.
 
+real length, width
+
+main()
+  RequestData()
+  CalculateArea()
+
+Function Void RequestData()
+  Display "Enter the rectangle's width"
+  width = input
+  Display "Enter the rectangle's length"
+  length = input
+
+Function Void CalculateArea()
+  real area = length * width
+  DisplayData(area)
+
+Function Real DisplayData(Real area)
+  Display "The area of your rectangle is {0}", area.tostring()
+
+
+
+
 ## Feet to Inches
 
 One foot equals 12 inches. Design a function named feetToInches that accepts a number of feet as an argument, and returns the number of inches in that many feet. Use the function in a program that prompts the user to enter a number of feet and then displays the number of inches in that many feet.
+
+Const integer FT_TO_IN = 12
+
+main()
+  real feet = GetFeet()
+  real inches = feetToInches(feet)
+  DisplayResult(feet, inches)
+
+Function Real GetFeet()
+  Display "Enter the number of feet to convert into inches."
+  real feet = input.toreal()
+  return feet
+
+Function Real feetToInches(real feet)
+  return FT_TO_IN * feet
+
+Function Void DisplayResult(real feet, real inches)
+  Display "{0} feet is equal to {1} inches", feet.tostring(), inches.tostring()
+
+
 
 ## Math Quiz
 
@@ -21,9 +63,49 @@ Design a program that gives simple math quizzes. The program should display two 
 ```
 The program should allow the student to enter the answer. If the answer is correct, a message of congratulations should be displayed. If the answer is incorrect, a message showing the correct answer should be displayed.
 
+integer int1, int2, answer, userAnswer
+int1 = rand(0, 999)
+int2 = rand(0, 999)
+
+// Saves the correct answer
+answer = int1 + int2
+
+Gets the user to answer
+Display "Enter the answer to {0} + {1}", int1.tostring(), int2.tostring()
+userAnswer = input.toint()
+
+if (answer = userAnswer)
+  Display "Congratulations on the correct answer"
+else
+  Display "The correct answer was {0}.", answer.tostring()
+
+
+
+
 ## Maximum of Two Values
 
 Design a function named max that accepts two integer values as arguments and returns the value that is the greater of the two. For example, if 7 and 12 are passed as arguments to the function, the function should return 12. Use the function in a program that prompts the user to enter two integer values. The program should display the value that is the greater of the two.
+
+main()
+  Display "Enter a number"
+  integer int1 = input.toint()
+  integer int2 = int1
+
+  While (int2 == int1)
+    Display "Enter a second number"
+    integer int2 = input.toint()
+
+  integer largerNum = max(int1, int2)
+
+  Display "{0} is the larger input", largerNum
+
+Function integer max(integer int1, integer int2)
+  if (int1 > int2)
+    return int1
+  else
+    return int2
+
+
 
 ## Falling Distance
 
@@ -34,6 +116,20 @@ When an object is falling because of gravity, the following formula can be used 
 The variables in the formula are as follows: d is the distance in meters, g is 9.8, and t is the amount of time, in seconds, that the object has been falling.
 
 Design a function named fallingDistance that accepts an object’s falling time (in seconds) as an argument. The function should return the distance, in meters, that the object has fallen during that time interval. Design a program that calls the function in a loop that passes the values 1 through 10 as arguments and displays the return value.
+
+Function Void Main()
+  integer distance;
+  for(i = 1; i < 11; i++)
+    distance = fallingDistance(i)
+    Display "The distance traveled while falling for {0} second(s) is {1} meters", i, distance
+
+Function Real fallingDistance(Real time)
+  Const Real GRAVITY = 9.8
+  Real distance = .5 * GRAVITY * time * time
+  return distance
+
+
+
 
 ## Kinetic Energy
 

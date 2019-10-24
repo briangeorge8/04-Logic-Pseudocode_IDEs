@@ -1,0 +1,13 @@
+
+--To upload new files created locally--
+
+
+
+--To upload updates to my online repository--
+
+
+
+--To Update/Get new files from instructors' repository---
+git fetch upstream
+git merge upstream/master
+git push origin master
