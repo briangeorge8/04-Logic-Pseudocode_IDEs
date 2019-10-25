@@ -81,7 +81,7 @@ Function Real[] GetData()
 
 
 Function Void CalcAndDisplayMetrics(Real[] arrMonthlyRainfall)
-    Real totalYearRainfall = 0, averageYearRainfall = 0, LowestTotalRain = arrMonthlyRainfall[0], HighestTotalRain = arrMonthlyRainfall[11]
+    Real totalYearRainfall = 0, averageYearRainfall = 0, LowestTotalRain = arrMonthlyRainfall[0], HighestTotalRain = arrMonthlyRainfall[0]
 
     foreach (Real num in arrMonthlyRainfall)
         totalYearRainfall += num
@@ -106,13 +106,35 @@ Function Void CalcAndDisplayMetrics(Real[] arrMonthlyRainfall)
 Design a program that asks the user to enter a series of 20 numbers. The program should store the numbers in an array and then display the following data:
 ```
 The lowest number in the array
-
 The highest number in the array
-
 The total of the numbers in the array
-
 The average of the numbers in the array
 ```
+
+Main()
+    CalcAndDisplayMetrics(arrNumbers)
+
+Function Void CalcAndDisplayMetrics(Real[] arrNumbers)
+    Real lowestNum = 0, highestNum = 0, totalCount = 0, averageNum = 0
+
+    foreach (Real num in arrNumbers)
+        averageNum += num
+        totalCount++
+
+        if (num < lowestNum)
+            lowestNum = num
+
+        if (num > highestNum)
+            highestNum = num
+
+    averageNum /= 12
+
+    Display "The lowest number is {0}.", lowestNum
+    Display "The highest number is {0}.", highestNum
+    Display "The total amount of numbers stored is {0}.", totalCount
+    Display "The average of this series of numbers is {0}.", averageNum
+
+
 
 ## Charge Account Validation
 
