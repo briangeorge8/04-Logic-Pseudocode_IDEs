@@ -18,19 +18,21 @@ Main()
 
 	DisplayResults(payPeriodPay)
 
+
 Function Real GetRealData(Real lowerBound, Real upperBound, String statement)
 	Display statement
-
 	Real number = input.toreal()
 
 	while(number < lowerBound OR number > upperBound)
 		Display statement
-		real number = input.toreal()
+		number = input.toreal()
 
 	return number
 
+
 Function Real CalcPayPeriodPay(Real hourlyPayRate, Real hoursWorked)
 	return hourlyPayRate * hoursWorked
+
 
 Function Void DisplayResults(Real payPeriodPay)
 	Display "Your pay this period is {0}", payPeriodPay
@@ -61,7 +63,7 @@ Function Integer GetData(string seatingArea)
 			(seatingArea == "C" AND ticketsSold > 200)
 		Display "Invalid number entered.
 		Display "Enter the number of tickets sold in seating area {0}.", seatingArea
-		integer ticketsSold = input.toint()
+		ticketsSold = input.toint()
 
 	return ticketsSold
 
