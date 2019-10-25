@@ -13,9 +13,7 @@ Const Real Max_Hours = 40
 Main()
 	Real hourlyPayRate = GetRealData(Min_Pay_Rate, Max_Pay_Rate, "Enter your hourly pay rate.")
 	Real hoursWorked = GetRealData(Min_Hours, Max_Hours, "Enter the number of hours you worked this pay period")
-	
 	Real payPeriodPay = CalcPayPeriodPay(hourlyPayRate, hoursWorked)
-
 	DisplayResults(payPeriodPay)
 
 
