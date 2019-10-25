@@ -67,10 +67,17 @@ Declare Integer secondArray[SIZE]
 ```
 Also, assume that values have been stored in each element of firstArray. Design an algorithm that copies the contents of firstArray to secondArray.
 
-
+for(i = 0; i < 100; i++)
+    numberArray2[i] = numberArray1[i]
 
 
 ## 10. Design an algorithm for a function that accepts an Integer array as an argument and returns the total of the values in the array.
+
+Function Integer GetTotal(Integer[] arrNumbers)
+    Integer intTotal = 0
+    foreach (Integer intNum in arrNumbers)
+        intTotal += intNum
+    Return intTotal
 
 ## 11. Write a pseudocode algorithm that uses the For Each loop to display all of the values in the following array:
 ```
@@ -78,6 +85,6 @@ Constant Integer SIZE = 10
 Declare Integer values[SIZE] = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ```
 
-
-
+Foreach (Integer intNum in values)
+    Display intNum
 

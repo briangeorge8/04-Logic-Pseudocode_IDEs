@@ -4,13 +4,102 @@
 
 Design a program that asks the user to enter a store’s sales for each day of the week. The amounts should be stored in an array. Use a loop to calculate the total sales for the week and display the result.
 
+Main()
+    Real[] arrSales = GetSales()
+    Real totalSales = GetTotalSales(arrSales)
+    ShowResults(totalSales)
+
+
+Function Real[] GetSales()
+    // Declares and initializes variables
+    Const Integer DAYS_OF_WEEK = 7
+    Real sales = 0
+    Real[] arrSales[DAYS_OF_WEEK]
+
+    // Gets each day's sales total and stores it in an array
+    for(i = 1; i < DAYS_OF_WEEK; i++)
+        Display "Enter the sales total for day {0}", i
+        sales = input.toreal()
+        arrSales[i - 1] = sales
+
+    // Returns the array
+    return arrSales
+
+
+Function Real GetTotalSales(Real[] arrSales)
+    Real totalSales = 0
+
+    foreach (Real sale in arrSales)
+        totalSales += sale
+
+    return totalSales
+
+
+Function Void ShowResults(Real totalSales)
+    Display "The total sales for this past week is {0}", totalSales.tostring()
+
+
+
 ## Lottery Number Generator
 
 Design a program that generates a 7-digit lottery number. The program should have an Integer array with 7 elements. Write a loop that steps through the array, randomly generating a number in the range of 0 through 9 for each element. Then write another loop that displays the contents of the array.
 
+Main()
+    Integer[] arrLotteryNumbers[7] = GetNumbers()
+    ShowLotteryNumbers(arrLotteryNumbers)
+
+Function Integer[] GetNumbers()
+    Integer[] arrLotteryNumbers[7]
+
+    for(i = 0; i < 7; i++)
+        arrLotteryNumbers[i] = random(0,9)
+
+    return arrLotteryNumbers
+
+Function Void ShowLotteryNumbers(Integer[] arrLotteryNumbers)
+    foreach(Integer intNum in arrLotteryNumbers)
+        Display intNum
+
+
+
 ## Rainfall Statistics
 
 Design a program that lets the user enter the total rainfall for each of 12 months into an array. The program should calculate and display the total rainfall for the year, the average monthly rainfall, and the months with the highest and lowest amounts.
+
+Main()
+    Real[] arrMonthlyRainfall[12] = GetData()
+    CalcAndDisplayMetrics(arrMonthlyRainfall)
+
+Function Real[] GetData()
+    Real[] arrMonthlyRainfall[12]
+
+    for(i = 0; i < 12; i++)
+        Display "Enter the rainfall amount for month {0}", i
+        arrMonthlyRainfall[i] = input.toreal()
+
+    return arrMonthlyRainfall
+
+
+Function Void CalcAndDisplayMetrics(Real[] arrMonthlyRainfall)
+    Real totalYearRainfall = 0, averageYearRainfall = 0, LowestTotalRain = arrMonthlyRainfall[0], HighestTotalRain = arrMonthlyRainfall[11]
+
+    foreach (Real num in arrMonthlyRainfall)
+        totalYearRainfall += num
+
+        if (num < LowestTotalRain)
+            LowestTotalRain = num
+
+        if (num > HighestTotalRain)
+            HighestTotalRain = num
+
+    averageYearRainfall = totalYearRainfall / 12
+
+    Display "The total rainfall for the year was {0}.", totalYearRainfall
+    Display "The average rainfall for the year was {0}.", averageYearRainfall
+    Display "The month with the lowest amount of rainfall this year was {0}.", LowestTotalRain
+    Display "The month with the highest amount of rainfall this year was {0}.", HighestTotalRain
+
+
 
 ## Number Analysis Program
 
